@@ -53,7 +53,7 @@ class ShopDatabase {
       name TEXT UNIQUE,
       description TEXT,
       quantity INTEGER,
-      pathImage TEXT,
+      pathImage TEXT
     )''');
   }
 

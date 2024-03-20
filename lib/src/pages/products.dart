@@ -21,7 +21,7 @@ Future cargarProductos() async {
   List<Product> dbProducts = await futureProducts;
   if (dbProducts.isEmpty) {
     final products = [
-      Product(0, "PC Sobremesa", "Ordenador sobremesa premontado", 600,
+      Product(0, "PC Sobremesa", "Ordenador sobremesa", 600,
           "assets/computadora.png"),
       Product(1, "Macbook Pro", "Ordenador Apple Macbook Pro", 1200,
           "assets/macbook-pro.png"),
@@ -87,15 +87,16 @@ class _ProductItem extends StatelessWidget {
           children: [
             Text(
               product.name,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
             ),
             Text(
               product.description,
-              style: const TextStyle(fontSize: 15),
+              style:
+                  const TextStyle(fontSize: 14, overflow: TextOverflow.visible),
             ),
             Text(
               "${product.price}€",
-              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
