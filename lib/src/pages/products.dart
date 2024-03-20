@@ -16,20 +16,16 @@ Future addToCart(Product product) async {
   await ShopDatabase.instance.insert(item);
 }
 
-Future cargarProductos() async {
-  Future<List<Product>> futureProducts = ShopDatabase.instance.getAllProducts();
-  List<Product> dbProducts = await futureProducts;
-  if (dbProducts.isEmpty) {
-    final products = [
-      Product(0, "PC Sobremesa", "Ordenador sobremesa", 600,
-          "assets/computadora.png"),
-      Product(1, "Macbook Pro", "Ordenador Apple Macbook Pro", 1200,
-          "assets/macbook-pro.png"),
-      Product(2, "iPad", "Tablet Apple iPad", 800, "assets/ipad.png")
-    ];
-    for (Product product in products) {
-      ShopDatabase.instance.insertProduct(product);
-    }
+void cargarProductos() {
+  final products = [
+    Product(0, "PC Sobremesa", "Ordenador sobremesa", 600,
+        "assets/computadora.png"),
+    Product(1, "Macbook Pro", "Ordenador Apple Macbook Pro", 1200,
+        "assets/macbook-pro.png"),
+    Product(2, "iPad", "Tablet Apple iPad", 800, "assets/ipad.png")
+  ];
+  for (Product product in products) {
+    ShopDatabase.instance.insertProduct(product);
   }
 }
 
