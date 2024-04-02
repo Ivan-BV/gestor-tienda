@@ -1,3 +1,3 @@
-# gestortienda
+# Gestor de tiendas
 
-Un app hecha en Flutter con Dart 💻 para gestionar tu tienda 🛒
+Una app hecha en Flutter con Dart 💻 para gestionar tu tienda 🛒
